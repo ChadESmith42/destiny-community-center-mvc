@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DestinyCommunityCenterModelStoreContainer" CdmEntityContainer="DestinyCommunityCenterEntities">
+    <EntitySetMapping Name="ToDoLists">
+      <EntityTypeMapping TypeName="DestinyCommunityCenterModel.ToDoList">
+        <MappingFragment StoreEntitySet="ToDoLists">
+          <ScalarProperty Name="ToDoListID" ColumnName="ToDoListID" />
+          <ScalarProperty Name="ListName" ColumnName="ListName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToDos">
+      <EntityTypeMapping TypeName="DestinyCommunityCenterModel.ToDo">
+        <MappingFragment StoreEntitySet="ToDos">
+          <ScalarProperty Name="ToDoID" ColumnName="ToDoID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="ToDoListID" ColumnName="ToDoListID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

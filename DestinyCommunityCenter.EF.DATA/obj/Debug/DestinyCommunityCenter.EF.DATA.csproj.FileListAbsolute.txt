@@ -1,0 +1,10 @@
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\DestinyCommunityCenter.EF.DATA.dll.config
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\DestinyCommunityCenter.EF.DATA.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\DestinyCommunityCenter.EF.DATA.pdb
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\EntityFramework.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\EntityFramework.xml
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\obj\Debug\DestinyCommunityCenter.EF.DATA.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\obj\Debug\DestinyCommunityCenter.EF.DATA.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\DestinyCommunityCenter\src\DestinyCommunityCenter.EF.DATA\obj\Debug\DestinyCommunityCenter.EF.DATA.pdb

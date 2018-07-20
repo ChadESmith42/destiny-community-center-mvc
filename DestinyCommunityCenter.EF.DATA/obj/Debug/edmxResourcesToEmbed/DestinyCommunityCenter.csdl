@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DestinyCommunityCenterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ToDoList">
+    <Key>
+      <PropertyRef Name="ToDoListID" />
+    </Key>
+    <Property Name="ToDoListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ListName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ToDos" Relationship="Self.FK_ToDos_ToDoLists" FromRole="ToDoLists" ToRole="ToDos" />
+  </EntityType>
+  <EntityType Name="ToDo">
+    <Key>
+      <PropertyRef Name="ToDoID" />
+    </Key>
+    <Property Name="ToDoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IsComplete" Type="Boolean" Nullable="false" />
+    <Property Name="ToDoListID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ToDoList" Relationship="Self.FK_ToDos_ToDoLists" FromRole="ToDos" ToRole="ToDoLists" />
+  </EntityType>
+  <Association Name="FK_ToDos_ToDoLists">
+    <End Role="ToDoLists" Type="Self.ToDoList" Multiplicity="1" />
+    <End Role="ToDos" Type="Self.ToDo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ToDoLists">
+        <PropertyRef Name="ToDoListID" />
+      </Principal>
+      <Dependent Role="ToDos">
+        <PropertyRef Name="ToDoListID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DestinyCommunityCenterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ToDoLists" EntityType="Self.ToDoList" />
+    <EntitySet Name="ToDos" EntityType="Self.ToDo" />
+    <AssociationSet Name="FK_ToDos_ToDoLists" Association="Self.FK_ToDos_ToDoLists">
+      <End Role="ToDoLists" EntitySet="ToDoLists" />
+      <End Role="ToDos" EntitySet="ToDos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DestinyCommunityCenter.EF.DATA.ToDoList>
+
+@{
+    ViewBag.Title = "To-Do Lists";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create", null, null, htmlAttributes: new { @class = "btn btn-success" })
+    </p>
+}
+
+<table class="table data-table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ListName)
+            </th>
+            <th>Admin</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListName)
+            </td>
+            <td>
+                @if (User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ToDoListID }, htmlAttributes: new { @class = "btn btn-success admin-btn" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ToDoListID }, htmlAttributes: new { @class = "btn btn-success admin-btn" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ToDoListID }, htmlAttributes: new { @class = "btn btn-primary" })
+                }
+                @if (User.IsInRole("Volunteer"))
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.ToDoListID }, htmlAttributes: new { @class = "btn btn-primary" })
+                }
+
+            </td>
+        </tr>
+    }
+</tbody>
+</table>
